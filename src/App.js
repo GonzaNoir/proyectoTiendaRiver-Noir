@@ -11,9 +11,11 @@ function App() {
     // Crear componentes sobre la Ropa de river.
 
     <>
-      <Header />
-      <hr/>
-      
+      <section className="fondoHeader">
+        <Header />
+        <hr/>
+      </section>
+        
       <BodyMain />
 
       <Footer />
