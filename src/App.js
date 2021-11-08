@@ -1,8 +1,8 @@
-// import logo from './logo.svg';
+
 import './App.css';
-import Footer from './Footer';
-import Header from './Header.js';
-import BodyMain from './BodyMain';
+import Footer from './components/Footer.js';
+import Header from './components/Header.js';
+import BodyMain from './components/BodyMain.js';
 
 
 function App() {

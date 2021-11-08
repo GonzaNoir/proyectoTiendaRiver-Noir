@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import ItemListContainer from './components/ItemListContainer';
+import logo from '../logo.svg';
+import ItemListContainer from './ItemListContainer';
 
 export default function BodyMain(){
     return(
