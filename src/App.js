@@ -13,7 +13,7 @@ function App() {
     <>
       <section className="fondoHeader">
         <Header />
-        <hr/>
+        
       </section>
         
       <BodyMain />

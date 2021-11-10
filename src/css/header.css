@@ -2,6 +2,7 @@
     background: linear-gradient(to bottom, rgb(255, 0, 0), white);
     position: sticky;
     top: 0px;
+    z-index: 3;
 }
 
 .responsiveHeader{

@@ -6,7 +6,7 @@ export default function BodyMain(){
         <>
             <ItemListContainer/>
             {/* <p className="App">Esta es mi pagina del Curso React. Aqui podras encontrar mi E-commerce.</p> */}
-            <img src={logo}/>
+            <img src={logo} alt=""/>
         </>
     );
 }
