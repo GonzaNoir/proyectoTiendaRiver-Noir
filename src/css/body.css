@@ -1,3 +1,30 @@
 .titulosBody{
     text-align: center;
 }
+
+.contadorItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.contenedorContador{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spanContador{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.productosFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
