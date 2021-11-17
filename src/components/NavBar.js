@@ -1,4 +1,4 @@
-import logoTienda from './logoTienda.png';
+import logoTienda from '../img/logoTienda.png';
 import CartWidget from './CartWidget';
 import '../css/header.css';
 
