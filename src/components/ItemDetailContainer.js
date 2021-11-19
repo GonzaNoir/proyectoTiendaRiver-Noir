@@ -1,35 +1,36 @@
 import React ,{ useState, useEffect } from "react";
-import getItem from "../utils/getItem.js";
+// import getItem from "../utils/getItem.js";
+import data from "../data/data";
 import ItemDetail from "./ItemDetail.js";
 // import { useParams } from "react-router-dom";
-import Items from "../utils/Item.js";
+// import Items from "../components/Item.js";
 
 
 const ItemDetailContainer = () =>{
 
-    // const [item, setItem] = useState({});
-    // const { id } = useParams();
+    const [item, setItem] = useState({});
 
-    // useEffect(() => {
+    const getItem = (time, task) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (data.length > 0) {
+                    resolve(task);
+                } else {
+                    reject("Error");
+                }
+            }, time);
+        });
+    }
 
-    //     const getItem = new Promise((resolve) => {
-    //         setTimeout(() => {
-    //             resolve(Items);
-    //             console.log(Items);
-    //         }, 2000);
-    //     });
-
-    //     getItem()
-    //       .then((resolve) => {
-    //         setItem(resolve.find((i) => i.id === id));
-    //     })
-    // }, [id]);
+    useEffect(() => {
+        getItem(2000, data[0])
+            .then((res) => setItem(res))
+            .catch(err => console.log(err))
+    }, []);
 
     return(
         <div className="container">
-            
-            <ItemDetail />
-            
+            <ItemDetail item={item}/>
         </div>
     );
 

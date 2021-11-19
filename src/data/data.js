@@ -2,11 +2,10 @@ import remeraLocal from '../img/remeraLocal.jpg';
 import remeraVisitante from '../img/remeraVisitante.jpg';
 import remeraAlternativa from '../img/remeraAlternativa.jpg';
 
-
-const Items = [
+const Item = [
     {
         id: 1,
-        name: "Camiseta Local River Plate 21/22",
+        tittle: "Camiseta Local River Plate 21/22",
         stock: 10,
         cost: 8999,
         imagen: remeraLocal,
@@ -14,7 +13,7 @@ const Items = [
     },
     {
         id: 2,
-        name: "Camiseta Visitante River Plate 21/22",
+        tittle: "Camiseta Visitante River Plate 21/22",
         stock: 10,
         cost: 12999,
         imagen: remeraVisitante,
@@ -22,7 +21,7 @@ const Items = [
     },
     {
         id: 3,
-        name: "Camiseta Alternativa River Plate 21/22",
+        tittle: "Camiseta Alternativa River Plate 21/22",
         stock: 10,
         cost: 8999,
         imagen: remeraAlternativa,
@@ -30,9 +29,4 @@ const Items = [
     }
 ]
 
-// module.exports = {
-//     Items,
-// }
-
-
-export default Items;
+export default Item;
