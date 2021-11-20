@@ -29,3 +29,11 @@
     justify-content: start;
     align-items: center;
 }
+
+.paddingDetail{
+    padding-top: 50px;
+}
+
+.paddingCardItem{
+    padding-bottom: 30px;
+}

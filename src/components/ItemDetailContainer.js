@@ -1,4 +1,5 @@
 import React ,{ useState, useEffect } from "react";
+import { useParams } from "react-router";
 // import getItem from "../utils/getItem.js";
 import data from "../data/data";
 import ItemDetail from "./ItemDetail.js";
@@ -8,8 +9,9 @@ import ItemDetail from "./ItemDetail.js";
 
 const ItemDetailContainer = () =>{
 
-    const [item, setItem] = useState({});
-
+    const [dato, setDato] = useState({});
+    const { idItem } = useParams();
+    
     const getItem = (time, task) => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -23,14 +25,14 @@ const ItemDetailContainer = () =>{
     }
 
     useEffect(() => {
-        getItem(2000, data[0])
-            .then((res) => setItem(res))
+        getItem(1000, data.find(item => item.id === parseInt(idItem)))
+            .then((res) => setDato(res))
             .catch(err => console.log(err))
     }, []);
 
     return(
         <div className="container">
-            <ItemDetail item={item}/>
+            <ItemDetail item={dato}/>
         </div>
     );
 

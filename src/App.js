@@ -1,8 +1,5 @@
-
 import './App.css';
-import Footer from './components/Footer.js';
-import Header from './components/Header.js';
-import BodyMain from './components/BodyMain.js';
+import Home from './pages/Home';
 
 
 function App() {
@@ -11,14 +8,7 @@ function App() {
     // Crear componentes sobre la Ropa de river.
 
     <>
-      <section className="fondoHeader">
-        <Header />
-        
-      </section>
-        
-      <BodyMain />
-
-      <Footer />
+      <Home/>
     </>
   );
 }

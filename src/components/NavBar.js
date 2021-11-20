@@ -1,6 +1,7 @@
 import logoTienda from '../img/logoTienda.png';
 import CartWidget from './CartWidget';
 import '../css/header.css';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
     return (
@@ -20,10 +21,10 @@ export default function NavBar() {
             <div className="row">
             <div className="col-lg-12 responsiveHeaderLista">
                     <ul className="listaNavBar">
-                        <li>Hombre</li>
-                        <li>Mujeres</li>
-                        <li>Niños</li>
-                        <li>Accesorios</li>
+                        <li><Link to='/category/Camisetas'style={{textDecoration: "none", color: "black"}}>Camisetas</Link></li>
+                        <li><Link to='/category/Abrigos'style={{textDecoration: "none", color: "black"}}>Abrigos</Link></li>
+                        <li><Link to='/category/Shorts'style={{textDecoration: "none", color: "black"}}>Shorts</Link></li>
+                        <li><Link to='/'style={{textDecoration: "none", color: "black"}}>Catálago</Link></li>
                     </ul>
                 </div>
             </div>
