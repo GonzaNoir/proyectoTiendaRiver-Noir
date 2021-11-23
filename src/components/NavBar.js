@@ -15,7 +15,7 @@ export default function NavBar() {
                 </div>
                 <div className="col-lg-4 responsiveHeaderOnline">
                     <h3>Login</h3>
-                    <CartWidget />
+                    <Link to='/cart'><CartWidget /></Link>
                 </div>
             </div>
             <div className="row">

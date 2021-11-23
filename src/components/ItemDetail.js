@@ -2,11 +2,17 @@
 // import getItem from "../utils/getItem";
 import ItemCount from "./ItemCount";
 import '../css/body.css';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Cargando from "../utils/Cargando";
 
 const ItemDetail = ({ item }) =>{
 
-    const onAdd = (qty) =>{
-        alert("Seleccionaste " + qty + " items.")
+    const [compra, setCompra] = useState(false);
+    const btnAgregar = (props) =>{
+        alert ("Has seleccionado " + props + " productos.");
+        setCompra(true);
+        // onAdd(item.id, item.tittle, item.cost, item.imagen, props.unidades);
     }
 
     return (
@@ -26,14 +32,15 @@ const ItemDetail = ({ item }) =>{
                             <p>Descripcion:</p>
                             <p>{item.desc}</p>
                         </div>
-                        <ItemCount stock={item.stock} initial={1} onAdd={onAdd}/>
-                        {/* {!buy ? (
-                        ) : (
-                            <button type="button" className="btn btn-outline-dark">Terminar Compra</button>
-                        )} */}
+                        {
+                            !compra 
+                            ? (<ItemCount stock={item.stock} initial={1} onAdd={btnAgregar}/>)
+                            : (<Link to="/cart"><button type="button" className="btn btn-outline-dark">Terminar Compra</button></Link>)
+                        }
                     </div>
                 </div>
-                : <h1>Cargando...</h1>
+                : <div className="centerCargando"><Cargando /></div>
+                
             }
             
             
