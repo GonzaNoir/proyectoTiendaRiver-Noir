@@ -17,10 +17,6 @@ export default function ItemCount({stock = 0, initial = 1, onAdd}){
         
     }
 
-    const agregarCarrito = () =>{
-        console.log(`Se agrego al carrito ${cantProductos} productos.`);
-    }
-
     const restarProductos = () =>{
         if(cantProductos > initial){
             setCantProductos(cantProductos - 1);

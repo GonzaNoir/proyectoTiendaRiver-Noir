@@ -8,10 +8,11 @@ import Cargando from "../utils/Cargando";
 
 const ItemDetail = ({ item }) =>{
 
-    const [compra, setCompra] = useState(false);
-    const btnAgregar = (props) =>{
-        alert ("Has seleccionado " + props + " productos.");
-        setCompra(true);
+    const [compra, setCompra] = useState(0);
+
+    const btnAgregar = (qty) =>{
+        alert ("Has seleccionado " + qty + " productos.");
+        setCompra(qty);
         // onAdd(item.id, item.tittle, item.cost, item.imagen, props.unidades);
     }
 
@@ -34,7 +35,7 @@ const ItemDetail = ({ item }) =>{
                         </div>
                         {
                             !compra 
-                            ? (<ItemCount stock={item.stock} initial={1} onAdd={btnAgregar}/>)
+                            ? (<ItemCount stock={item.stock} initial={compra} onAdd={btnAgregar}/>)
                             : (<Link to="/cart"><button type="button" className="btn btn-outline-dark">Terminar Compra</button></Link>)
                         }
                     </div>
@@ -42,9 +43,6 @@ const ItemDetail = ({ item }) =>{
                 : <div className="centerCargando"><Cargando /></div>
                 
             }
-            
-            
-            
         </>
     );
 
