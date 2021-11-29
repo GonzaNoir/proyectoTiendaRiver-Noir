@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import '../css/body.css';
 
 const Items = ({id, tittle, stock, imagen, cost}) =>{
-    console.log(id);
 
     return(
         <div className="col-lg-4 paddingCardItem"> 

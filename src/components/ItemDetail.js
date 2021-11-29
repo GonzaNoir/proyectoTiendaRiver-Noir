@@ -2,18 +2,21 @@
 // import getItem from "../utils/getItem";
 import ItemCount from "./ItemCount";
 import '../css/body.css';
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Cargando from "../utils/Cargando";
+import { CartContext } from "./CartContext";
 
 const ItemDetail = ({ item }) =>{
 
     const [compra, setCompra] = useState(0);
 
+    const test = useContext(CartContext);
+
     const btnAgregar = (qty) =>{
         alert ("Has seleccionado " + qty + " productos.");
         setCompra(qty);
-        // onAdd(item.id, item.tittle, item.cost, item.imagen, props.unidades);
+        test.agregarAlCarrito(item, qty);
     }
 
     return (
@@ -34,7 +37,7 @@ const ItemDetail = ({ item }) =>{
                             <p>{item.desc}</p>
                         </div>
                         {
-                            !compra 
+                            compra === 0
                             ? (<ItemCount stock={item.stock} initial={compra} onAdd={btnAgregar}/>)
                             : (<Link to="/cart"><button type="button" className="btn btn-outline-dark">Terminar Compra</button></Link>)
                         }

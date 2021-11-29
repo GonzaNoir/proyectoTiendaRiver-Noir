@@ -1,5 +1,4 @@
 import '../css/body.css';
-// import ItemCount from './ItemCount.js';
 import ItemList from './ItemList';
 import Item from "../data/data.js"
 import { useState, useEffect } from 'react';
@@ -26,13 +25,6 @@ export default function ItemListContainer(){
 
     // ComponentDidUpdate
     useEffect(() => {
-        // setCargando(true);
-
-        // const getItem = new Promise((res) => {
-        //   setTimeout(() => {
-        //     res(Item);
-        //   }, 2000);
-        // });
 
         getItem(1000, Item.filter(item =>{
             if(categoryId === undefined) return item;

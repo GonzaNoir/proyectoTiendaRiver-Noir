@@ -46,3 +46,21 @@
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
+.flexBtns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 50px;
+}
+
+.flexCart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgCart{
+    padding-bottom: 1rem;
+}
