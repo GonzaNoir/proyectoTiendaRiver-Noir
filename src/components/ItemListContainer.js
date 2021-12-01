@@ -1,6 +1,7 @@
 import '../css/body.css';
 import ItemList from './ItemList';
 import Item from "../data/data.js"
+// import firestoreFetch from '../utils/firestoreFetch';  DESCOMENTAR PARA DESAFIO 10
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import Cargando from '../utils/Cargando';
@@ -33,7 +34,18 @@ export default function ItemListContainer(){
             .then((data) => {setProductos(data);})
             .catch(err => console.log(err))
             .finally(() => setCargando(false));
-    }, [productos]);
+        // firestoreFetch(categoryId)
+        //     .then(result => setProductos(result))
+        //     .catch(err => console.log(err))
+        //     .finally(() => setCargando(false));
+    }, [categoryId]);
+
+    // ComponentWillUnmount
+    useEffect(() => {
+        return (() => {
+            setProductos([]);
+        })
+    }, []);
 
     return(
         <div className="container">

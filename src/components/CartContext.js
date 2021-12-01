@@ -33,8 +33,36 @@ const CartContextProvider = ({ children }) =>{
         setListaCarrito(result);
     }
 
+    const calcTotalPorItem = (idItem) => {
+        let index = listaCarrito.map(item => item.idItem).indexOf(idItem);
+        return listaCarrito[index].costItem * listaCarrito[index].qtyItem;
+    }
+
+    const calcSubTotal = () => {
+        let totalPorItem = listaCarrito.map(item => calcTotalPorItem(item.idItem));
+        return totalPorItem.reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+    }
+
+    const calcTotal = () => {
+        return calcSubTotal();
+    }
+
+    const calcItemsQty = () => {
+        let qtys = listaCarrito.map(item => item.qtyItem);
+        return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+    }
+
     return(
-        <CartContext.Provider value={{listaCarrito, agregarAlCarrito, vaciarCarrito, borrarItem}}>
+        <CartContext.Provider value={{
+            listaCarrito, 
+            agregarAlCarrito, 
+            vaciarCarrito, 
+            borrarItem,
+            calcTotalPorItem,
+            calcSubTotal,
+            calcItemsQty,
+            calcTotal
+            }}>
             { children }
         </CartContext.Provider>
     )

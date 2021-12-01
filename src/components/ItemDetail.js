@@ -11,12 +11,12 @@ const ItemDetail = ({ item }) =>{
 
     const [compra, setCompra] = useState(0);
 
-    const test = useContext(CartContext);
+    const context = useContext(CartContext);
 
     const btnAgregar = (qty) =>{
         alert ("Has seleccionado " + qty + " productos.");
         setCompra(qty);
-        test.agregarAlCarrito(item, qty);
+        context.agregarAlCarrito(item, qty);
     }
 
     return (
