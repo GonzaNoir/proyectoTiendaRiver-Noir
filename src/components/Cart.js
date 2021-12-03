@@ -3,9 +3,49 @@ import { Link } from 'react-router-dom';
 import '../css/body.css';
 import { CartContext } from './CartContext';
 
+// import { collection, doc, setDoc, updateDoc, increment } from '@firebase/firestore';
+// import  db  from '../utils/firebaseConfig';
+
 const Cart = () =>{
     
     const context = useContext(CartContext);
+
+    // const crearOrden = () => {
+    //     let orden = {
+    //         comprador: {
+    //             nombre: "",
+    //             email: "",
+    //             telefono: ""
+    //         },
+    //         items: context.listaCarrito.map(item => ({
+    //             id: item.idItem,
+    //             title: item.nameItem,
+    //             precio: item.costItem,
+    //             cantidad: item.qtyItem
+    //         })),
+    //         total: context.calcTotal()
+    //     };
+        
+    //     const crearOrdernFirestore = () => {
+    //         const referenciaNuevaOrden = doc(collection(db, "ordenes"));
+    //         await setDoc(newOrderRef, data);
+    //         return referenciaNuevaOrden;
+    //     }
+
+    //     crearOrdernFirestore()
+    //         .then(result => alert(result.id))
+    //         .catch(err => console.log(err))
+            
+    //         context.listaCarrito.forEach(async(item) => {
+    //             const itemRef = doc(db, "Item", item.idItem);
+    //             await updateDoc(itemRef, {
+    //                 stock: increment(- item.qtyItem)
+    //             })
+    //         })
+
+    //         .finally(context.vaciarCarrito())
+    // }
+
     return(
         <div className="container">
             <div className="row">

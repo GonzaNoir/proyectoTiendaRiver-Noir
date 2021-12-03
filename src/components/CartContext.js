@@ -13,14 +13,16 @@ const CartContextProvider = ({ children }) =>{
                 ...listaCarrito,
                 {
                     idItem: item.id,
-                    imgItem: item.imagen,
+                    imgItem: item.imagen[0],
                     nameItem: item.tittle,
                     costItem: item.cost,
+                    // stockItem: item.stock,
                     qtyItem: qty,
                 }
             ])
         } else {
             found.qtyItem += qty;
+            setListaCarrito([...listaCarrito]);
         }
     }
 

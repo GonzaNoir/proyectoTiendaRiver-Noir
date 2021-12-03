@@ -1,4 +1,5 @@
-import { query, where, orderBy, collection, getDocs } from "firebase/firestore";
+import { query, where, orderBy, collection, getDocs} from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 import db from "./firebaseConfig";
 
 const firestoreFetch = async (categoryId) =>{
@@ -16,6 +17,19 @@ const firestoreFetch = async (categoryId) =>{
     return dataFromFireStore;
 }
 
+export const firestoreFetchItem = async (idItem) => {
+    const docRef = doc(db, "Item", idItem);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()){
+        return {
+            id: idItem,
+            ...docSnap.data()
+        }
+    }else{
+        console.log("No hay ningun documento.");
+    }
+}
 
 // COMENTAR TODO LO DE FIREBASE, CUANDO TERMINO DESAFIO 9 DESCOMENTARLO Y AVERIGUAR COMO LLAMAR A UN UNICO ITEM
 // COMENTAR TODO LO DE FIREBASE, CUANDO TERMINO DESAFIO 9 DESCOMENTARLO Y AVERIGUAR COMO LLAMAR A UN UNICO ITEM
