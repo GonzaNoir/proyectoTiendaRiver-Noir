@@ -69,3 +69,11 @@
 .totalPorItem{
     font-size: 16px;
 }
+
+.totalCompra{
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}

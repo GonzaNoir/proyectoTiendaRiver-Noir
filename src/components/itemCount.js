@@ -4,7 +4,7 @@ import '../css/body.css';
 
 export default function ItemCount({stock = 0, initial = 1, onAdd}){
 
-    const [cantProductos, setCantProductos] = useState(1);
+    const [cantProductos, setCantProductos] = useState(0);
 
     useEffect(() => {
         setCantProductos(initial);
@@ -14,11 +14,10 @@ export default function ItemCount({stock = 0, initial = 1, onAdd}){
         if (cantProductos < stock){
             setCantProductos(cantProductos + 1);
         }
-        
     }
 
     const restarProductos = () =>{
-        if(cantProductos > initial){
+        if(cantProductos > initial+1){
             setCantProductos(cantProductos - 1);
         }
         
@@ -29,9 +28,18 @@ export default function ItemCount({stock = 0, initial = 1, onAdd}){
             <div className="contadorItems">
                 <button type="button" className="btn btn-outline-dark" onClick={restarProductos}>-</button>
                 <span className="spanContador">{cantProductos}</span>
+                {/* {
+                    (cantProductos === 0)
+                    ? <span className="spanContador">{cantProductos+1}</span>
+                    : <span className="spanContador">{cantProductos}</span>
+                } */}
                 <button type="button" className="btn btn-outline-dark" onClick={sumarProductos}>+</button>
             </div>
-            <button type="button" className="btn btn-outline-dark" onClick={()=>onAdd(cantProductos)}>Agregar Carrito</button>
+            {
+                stock && cantProductos
+                ? <button type="button" className="btn btn-outline-dark" onClick={()=>onAdd(cantProductos)}>Agregar Carrito</button>
+                : <button type="button" className="btn btn-outline-dark" disabled>Agregar Carrito</button>
+            }
         </div>
     )
 }
