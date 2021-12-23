@@ -28,11 +28,6 @@ export default function ItemCount({stock = 0, initial = 1, onAdd}){
             <div className="contadorItems">
                 <button type="button" className="btn btn-outline-dark" onClick={restarProductos}>-</button>
                 <span className="spanContador">{cantProductos}</span>
-                {/* {
-                    (cantProductos === 0)
-                    ? <span className="spanContador">{cantProductos+1}</span>
-                    : <span className="spanContador">{cantProductos}</span>
-                } */}
                 <button type="button" className="btn btn-outline-dark" onClick={sumarProductos}>+</button>
             </div>
             {
