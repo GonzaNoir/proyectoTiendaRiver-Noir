@@ -28,7 +28,7 @@ Para finalizar, ejecuta ```npm start``` para vizualizarlo en tu navegador.
     
 ## Dependencias
 
-Bootrstrap para el diseño. 
+Bootstrap para el diseño. 
 
 
 ## Pagina en Funcionamiento
