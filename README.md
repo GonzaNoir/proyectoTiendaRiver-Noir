@@ -28,9 +28,7 @@ Para finalizar, ejecuta ```npm start``` para vizualizarlo en tu navegador.
     
 ## Dependencias
 
-1. Bootrstrap para el diseño. 
-2. RRD para la navegación.
-3. React Hook Form para formularios
+Bootrstrap para el diseño. 
 
 
 ## Pagina en Funcionamiento
