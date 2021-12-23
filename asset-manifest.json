@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/proyectoTiendaRiver-Noir/static/css/main.b9f4c7ae.chunk.css",
+    "main.js": "/proyectoTiendaRiver-Noir/static/js/main.27d09125.chunk.js",
+    "main.js.map": "/proyectoTiendaRiver-Noir/static/js/main.27d09125.chunk.js.map",
+    "runtime-main.js": "/proyectoTiendaRiver-Noir/static/js/runtime-main.587bb0c9.js",
+    "runtime-main.js.map": "/proyectoTiendaRiver-Noir/static/js/runtime-main.587bb0c9.js.map",
+    "static/js/2.9091e170.chunk.js": "/proyectoTiendaRiver-Noir/static/js/2.9091e170.chunk.js",
+    "static/js/2.9091e170.chunk.js.map": "/proyectoTiendaRiver-Noir/static/js/2.9091e170.chunk.js.map",
+    "static/js/3.400de401.chunk.js": "/proyectoTiendaRiver-Noir/static/js/3.400de401.chunk.js",
+    "static/js/3.400de401.chunk.js.map": "/proyectoTiendaRiver-Noir/static/js/3.400de401.chunk.js.map",
+    "index.html": "/proyectoTiendaRiver-Noir/index.html",
+    "static/css/main.b9f4c7ae.chunk.css.map": "/proyectoTiendaRiver-Noir/static/css/main.b9f4c7ae.chunk.css.map",
+    "static/js/2.9091e170.chunk.js.LICENSE.txt": "/proyectoTiendaRiver-Noir/static/js/2.9091e170.chunk.js.LICENSE.txt",
+    "static/media/iconFacebook.6c138a14.png": "/proyectoTiendaRiver-Noir/static/media/iconFacebook.6c138a14.png",
+    "static/media/iconInstagram.aa9cad39.png": "/proyectoTiendaRiver-Noir/static/media/iconInstagram.aa9cad39.png",
+    "static/media/iconYoutube.f7917493.png": "/proyectoTiendaRiver-Noir/static/media/iconYoutube.f7917493.png",
+    "static/media/logoTienda-Footer.72fd2c68.png": "/proyectoTiendaRiver-Noir/static/media/logoTienda-Footer.72fd2c68.png",
+    "static/media/logoTienda.e494d417.png": "/proyectoTiendaRiver-Noir/static/media/logoTienda.e494d417.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.587bb0c9.js",
+    "static/js/2.9091e170.chunk.js",
+    "static/css/main.b9f4c7ae.chunk.css",
+    "static/js/main.27d09125.chunk.js"
+  ]
+}
