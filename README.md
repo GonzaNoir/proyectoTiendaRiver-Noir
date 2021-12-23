@@ -22,9 +22,9 @@ Si lo que deseas es tener la copia de este proyecto en tu repo de GitHub deberas
 
 Primero, cloná el repositorio.
 
-Luego ejecuta el comando ```npm install ``` para instalar los paquetes necesarios.
+Luego ejecuta el comando ```npm install``` para instalar los paquetes necesarios.
 
-Para finalizar, ejecuta ```npm start ``` para vizualizarlo en tu navegador.
+Para finalizar, ejecuta ```npm start``` para vizualizarlo en tu navegador.
     
 ## Dependencias
 
