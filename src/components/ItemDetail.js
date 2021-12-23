@@ -1,5 +1,3 @@
-// import { useEffect } from "react/cjs/react.development";
-// import getItem from "../utils/getItem";
 import ItemCount from "./ItemCount";
 import '../css/body.css';
 import { useContext, useState } from "react";
@@ -24,9 +22,9 @@ const ItemDetail = ({ item }) =>{
             {
                 item && item.imagen
                 ?
-                <div className="row paddingDetail">
+                <div className="row paddingDetail fontStyle">
                     <div className="col-lg-4">
-                        <img src={item.imagen} alt={item.tittle} className="img-fluid"/>
+                        <img src={item.imagen} alt={item.tittle} className="img-fluid imgStyle"/>
                     </div>
                     <div className="col-lg-8">
                         <h2>{item.tittle}</h2>
@@ -39,11 +37,11 @@ const ItemDetail = ({ item }) =>{
                         {
                             compra === 0
                             ? (<ItemCount stock={item.stock} initial={compra} onAdd={btnAgregar}/>)
-                            : (<Link to="/cart"><button type="button" className="btn btn-outline-dark">Terminar Compra</button></Link>)
+                            : (<Link to="/cart"><button type="button" className="btn btn-outline-dark paddingBtnBuy">Terminar Compra</button></Link>)
                         }
                     </div>
                 </div>
-                : <div className="centerCargando"><Cargando /></div>
+                : <div className="centerCargandoDetail"><Cargando /></div>
                 
             }
         </>

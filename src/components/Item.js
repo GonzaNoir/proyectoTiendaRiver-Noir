@@ -1,5 +1,3 @@
-// import getItem from "../utils/getItem.js";
-// import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../css/body.css';
 
@@ -10,7 +8,7 @@ const Items = ({id, tittle, stock, imagen, cost}) =>{
             <div className="card">
                 <div className="card-body">
                     <h4 className="card-title">{tittle}</h4>
-                    <img src={imagen} alt={tittle} className="img-fluid"/>
+                    <img src={imagen} alt={tittle} className="img-fluid imgStyle"/>
                     <p className="card-text">Stock: {stock}</p>
                     <p className="card-text">${cost}</p>
                     <button type="button" className="btn btn-outline-dark">
@@ -21,10 +19,5 @@ const Items = ({id, tittle, stock, imagen, cost}) =>{
         </div> 
     )
 }
-
-// module.exports = {
-//     Items,
-// }
-
 
 export default Items;

@@ -1,6 +1,5 @@
 import '../css/body.css';
 import ItemList from './ItemList';
-// import Item from "../data/data.js"
 import firestoreFetch from '../utils/firestoreFetch';  
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
@@ -11,8 +10,6 @@ export default function ItemListContainer(){
     const [productos, setProductos] = useState([]);
     const { categoryId } = useParams();
     const [cargando, setCargando] = useState(true);
-
-    
 
     // ComponentDidUpdate
     useEffect(() => {
@@ -30,9 +27,9 @@ export default function ItemListContainer(){
     }, []);
 
     return(
-        <div className="container">
+        <div className="container fontStyle">
             <div className="row">
-                <h1 className="titulosBody col-lg-12"><em>Lista de Productos</em></h1>
+                <h1 className="titulosBody col-lg-12"><strong>Lista de Productos</strong></h1>
             </div>
             {
                 cargando ? (
@@ -43,8 +40,6 @@ export default function ItemListContainer(){
                     </div>
                 )
             }
-            
-            
         </div>
     )
 }

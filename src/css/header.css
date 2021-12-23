@@ -33,10 +33,11 @@
 .listaNavBar{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 
     list-style: none;
     font-size: 25px;
+    font-family: 'Poppins', sans-serif, '300';
 }
 
 .listaNavBar li:hover{
@@ -44,14 +45,17 @@
 }
 
 .carritoCompras{
-    width: 80px;
+    width: 60px;
 }
 
 .itemsCarrito{
     position: absolute;
-    right: 92px;
-    top: 60px;
+    right: 185px;
+    top: 53px;
     -webkit-text-fill-color: white;
     -webkit-text-stroke: 0.3px black;
 }
 
+.fontStyle{
+    font-family: 'Poppins', sans-serif, '600';
+}

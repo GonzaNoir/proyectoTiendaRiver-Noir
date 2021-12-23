@@ -1,4 +1,4 @@
-import carritoCompras from "../img/carritoCompras.png"
+import carritoCompras from "../img/carritoCompras2.png"
 import { CartContext } from "./CartContext"
 import { useContext } from 'react';
 

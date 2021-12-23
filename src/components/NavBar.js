@@ -12,11 +12,10 @@ export default function NavBar() {
                         <img src={logoTienda} alt="logo de la tienda de River" className="logoTienda" />
                     </div>
                     <div className="col-lg-4 responsiveHeader">
-                        <h2 className=""><strong><em>Tienda River</em></strong></h2>
+                        <h2 className="fontStyle"><strong>Tienda River</strong></h2>
                     </div>
                     <div className="col-lg-4 responsiveHeaderOnline">
-                        <h3>Login</h3>
-                        <Link to='/cart'><CartWidget /></Link>
+                        <Link to='/cart' style={{textDecoration: "none"}} className='sizeCarrito'><CartWidget /></Link>
                     </div>
                 </div>
                 <div className="row">

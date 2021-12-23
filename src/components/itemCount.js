@@ -24,7 +24,7 @@ export default function ItemCount({stock = 0, initial = 1, onAdd}){
     }
 
     return(
-        <div className="col-lg-4 contenedorContador">
+        <div className="col-lg-4 contenedorContador fontStyle">
             <div className="contadorItems">
                 <button type="button" className="btn btn-outline-dark" onClick={restarProductos}>-</button>
                 <span className="spanContador">{cantProductos}</span>
@@ -38,7 +38,7 @@ export default function ItemCount({stock = 0, initial = 1, onAdd}){
             {
                 stock && cantProductos
                 ? <button type="button" className="btn btn-outline-dark" onClick={()=>onAdd(cantProductos)}>Agregar Carrito</button>
-                : <button type="button" className="btn btn-outline-dark" disabled>Agregar Carrito</button>
+                : <button type="button" className="btn btn-outline-dark" disabled>Agregar al Carrito</button>
             }
         </div>
     )

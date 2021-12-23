@@ -1,4 +1,37 @@
-.footerStyle{
-    padding: 100px;
-    text-align: center;
+.copyStyle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif, '300';
+}
+
+.flexRedes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fontSize{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif, '300';
+}
+
+.sizeIcons{
+    width: 50px;
+}
+
+.sizeLogoFooter{
+    width: 75px;
+}
+
+.paddingFooter{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.styleFooter{
+    background-color: rgba(252, 18, 18, 0.801);
 }
